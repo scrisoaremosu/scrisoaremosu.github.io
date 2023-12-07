@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gift Page Transition</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Lobster', cursive; /* Use Lobster font for body text */
             margin: 0;
             padding: 0;
             display: flex;
@@ -14,7 +15,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: url('https://galantom-main.s3.eu-central-1.amazonaws.com/images/fundraising-pages/1737/default/c358ae52c0b93ee44b4d60a3b0832b252c23077c.jpg') center center no-repeat;
+            background: url('https://imgs.search.brave.com/p0uzSykc-h0SLzPmdwFP0PLNwRnLBkqQ_cOhaDbtvM8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2I1LzE5/L2M5L2I1MTljOWI5/YzAwMzcwMWE2MWE3/MTYxNzU2M2UyZDhk/LmpwZw') center center no-repeat;
             background-size: cover;
             position: relative;
             color: #ffffff; /* Text color on top of the background */
@@ -46,6 +47,7 @@
             border: none; /* Remove border */
             cursor: pointer;
             z-index: 1; /* Place the button above the overlay */
+            font-family: 'Lobster', cursive; /* Use Lobster font for button text */
         }
 
         #display-text {
@@ -54,6 +56,25 @@
             font-size: 18px;
             color: white;
             z-index: 1; /* Place the text above the overlay */
+            font-family: 'Lobster', cursive; /* Use Lobster font for display text */
+        }
+
+        #video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay for modal */
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Place the modal above everything else */
+        }
+
+        #video-frame {
+            width: 80%;
+            height: 80%;
         }
     </style>
 </head>
@@ -62,17 +83,33 @@
 
     <div id="header-text">Ce vreau de Crăciun</div>
 
-    <button id="gift-button" onclick="displayText()">Scrisoare</button>
+    <button id="gift-button" onclick="displayVideo()">Scrisoare</button>
 
     <div id="display-text">Un capodastru pentru chitara: https://www.zeedoshop.ro/produs_guitto-ggc-03-black_43684_0?gad_source=1
     </div>
 
     <div id="display-text">Un preamplificator</div>
 
+    <div id="video-modal">
+        <iframe id="video-frame" src="https://www.youtube.com/embed/9GHHGkV9WKU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+
     <script>
         function displayText() {
             var displayText = document.getElementById('display-text');
             displayText.style.display = 'block';
+        }
+
+        function displayVideo() {
+            var videoModal = document.getElementById('video-modal');
+            videoModal.style.display = 'flex';
+
+            // Set a timeout to redirect after 15 seconds
+            setTimeout(function () {
+                // Change the relative path to the desired file
+                window.location.href = './scrisoare.html';
+            }, 15000); // 15 seconds in milliseconds
         }
     </script>
 </body>
