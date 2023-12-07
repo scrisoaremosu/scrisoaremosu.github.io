@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Page Transition</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('https://galantom-main.s3.eu-central-1.amazonaws.com/images/fundraising-pages/1737/default/c358ae52c0b93ee44b4d60a3b0832b252c23077c.jpg') center center no-repeat;
+            background-size: cover;
+            position: relative;
+            color: #ffffff; /* Text color on top of the background */
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+        }
+
+        #header-text {
+            font-size: 100px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: red; /* Text color */
+            z-index: 1; /* Place the text above the overlay */
+        }
+
+        #gift-button {
+            background-color: white; /* Button background color */
+            color: red; /* Button text color */
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            border: none; /* Remove border */
+            cursor: pointer;
+            z-index: 1; /* Place the button above the overlay */
+        }
+
+        #display-text {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+            z-index: 1; /* Place the text above the overlay */
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay"></div>
+
+    <div id="header-text">Ce vreau de Crăciun</div>
+
+    <button id="gift-button" onclick="displayText()">Scrisoare</button>
+
+    <div id="display-text">Un capodastru pentru chitara: https://www.zeedoshop.ro/produs_guitto-ggc-03-black_43684_0?gad_source=1
+    </div>
+
+    <div id="display-text">Un preamplificator</div>
+
+    <script>
+        function displayText() {
+            var displayText = document.getElementById('display-text');
+            displayText.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
