@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Letter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://www.wall-street.ro/image_thumbs/thumbs/bbe/bbe418de976b9a3fa830bd57e70c634d-1063x560-00-86.jpg?v=1576414638') center center no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Make the background image static */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            max-width: 1200px;
+            overflow-x: auto; /* Allow horizontal scrolling */
+        }
+
+        #letter-container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for letter container */
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 15px; /* Rounded corners for the letter container */
+        }
+
+        #letter-text {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .ad-container {
+            max-width: 200px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .ad-image {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .ad-text {
+            margin-top: 10px;
+            font-size: 14px;
+            color: black; /* Set text color to black */
+        }
+    </style>
+</head>
+<body>
+    <div id="content-wrapper">
+        <!-- Image container styled like an ad to the left of the letter -->
+        <div class="ad-container">
+            <img class="ad-image" src="https://galantom-main.s3.eu-central-1.amazonaws.com/images/fundraising-pages/2970/default/3b6ccc198e4150af6e4d87111ce2bd4a9dbf7d9b.jpg" alt="Ad 1">
+            <div class="ad-text"><h1>Doneaza si tu!</h1></div>
+        </div>
+
+        <!-- Letter container in the middle -->
+        <div id="letter-container">
+            <h1>Draga mosule,</h1>
+            <p id="letter-text">
+                Sper ca am fost cuminte (am fost), te as ruga anul asta sa mi aduci un preamplificator (stie tata: 0727144574) si un capodastru iti las niste poze sa te ajute! Multumesc mult si te astept 🧑🏽‍🎄
+                <img class="ad-image" src="https://cdn.fonotecaparadis.ro/5125-large_default/mama-s-gun-2lp.jpg" alt="Ad 2">
+            </p>
+        </div>
+
+        <!-- Image container styled like an ad to the right of the letter -->
+        <div class="ad-container">
+            <img class="ad-image" src="https://amnb.ro/imagini/sportivi/A0324,-draghici-iustina,-5-iul-2002,-chicago,-css7-dinamo.jpg" alt="Ad 2">
+            <div class="ad-text"><h1>Ajuta o cauza pierduta!</h1></div>
+        </div>
+    </div>
+</body>
+</html>
